@@ -1,0 +1,94 @@
+/* Importando a fonte Sofia */
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sofia', cursive;
+}
+
+body {
+  background: #f0f8ff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #2b7a78;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#btn-add-habit {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #3aafa9;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+.habit-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.habit-options button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #def2f1;
+  border: 2px solid #3aafa9;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.days-checkbox {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+footer {
+  background-color: #2b7a78;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .habit-options {
+    flex-direction: column;
+    align-items: center;
+  }
+}
