@@ -22,4 +22,4 @@ Aplicação web para criação e rastreamento de hábitos diários.
 3. Clicar em **Criar Hábito** e seguir as instruções  
 
 ## Deploy
-Disponível em GitHub Pages: [seu-usuário.github.io/habit-tracker](#)
+Disponível em GitHub Pages: https://vexscrewe.github.io/ProjetoSaude/
