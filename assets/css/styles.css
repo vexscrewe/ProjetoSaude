@@ -22,10 +22,38 @@ header .banner {
   padding: 1.5rem;
 }
 
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #8B0000;
+  padding: 1rem;
+  width: 100%;
+}
+
 .banner-icon {
-  width: 50px;    /* reduzido */
+  width: 50px;
   height: auto;
-  vertical-align: middle;
+}
+
+/* Espelha a imagem direita */
+.banner-icon.reverse {
+  transform: scaleX(-1);
+}
+
+/* Título centralizado dentro do banner */
+.banner h1 {
+  font-family: 'Sofia', sans-serif;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.banner h1 span {
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 header h1 {
@@ -90,10 +118,11 @@ main {
   display: block;
   margin: 0 auto;
 }
+/* Controla todos os ícones de tipo de hábito */
 .type-card img {
-  width: 60px;   /* controla o tamanho */
+  max-width: 80px;
+  width: 100%;
   height: auto;
-  margin-bottom: 0.5rem;
 }
 
 /* formulários */
