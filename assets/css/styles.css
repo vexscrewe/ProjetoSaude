@@ -1,0 +1,98 @@
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Sofia', sans-serif;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header .banner {
+  background: #8B0000;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+.banner-icon { width: 60px; vertical-align: middle; }
+header h1 { display: inline-block; margin-left: 0.5rem; font-size: 2rem; }
+header small { font-size: 1rem; display: block; }
+
+main { flex: 1; padding: 1rem; }
+
+/* helpers */
+.hidden { display: none; }
+
+/* Botão inicial */
+#start { text-align: center; margin: 2rem 0; }
+#btn-create {
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #008C8C;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* seleção de tipos */
+#types h2 { text-align: center; margin-bottom: 1rem; }
+.type-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.type-card {
+  background: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .3s;
+}
+.type-card:hover { border-color: #008C8C; }
+.type-card img { width: 50px; display: block; margin: 0 auto 0.5rem; }
+
+/* formulários */
+.habit-form {
+  max-width: 500px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+.habit-form h3 { margin-bottom: 1rem; }
+.habit-form label { display: block; margin-bottom: 0.8rem; }
+.habit-form input[type="text"],
+.habit-form input[type="number"] {
+  width: 100%;
+  padding: 0.4rem;
+  margin-top: 0.2rem;
+}
+.habit-form fieldset {
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+.habit-form button {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  background: #008C8C;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* sumário */
+#summary { max-width: 600px; margin: 2rem auto; }
+#stats-list { list-style: none; }
+#stats-list li { margin-bottom: 0.5rem; }
+
+/* responsividade */
+@media (max-width: 600px) {
+  .type-cards { flex-direction: column; align-items: center; }
+  header h1 { font-size: 1.5rem; }
+}

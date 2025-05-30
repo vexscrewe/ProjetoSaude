@@ -1,10 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <title>Teste</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Controle de Hábitos</title>
+  
+  <!-- Fonte Sofia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    
+  <header>
+    <div class="banner">
+      <img src="assets/coracao.png" alt="Ícone de coração" class="banner-icon" />
+      <h1>ProjetoSaúde<br><small>+ Criar Hábito</small></h1>
+    </div>
+  </header>
+
+  <main>
+    <!-- Botão inicial para criar hábito -->
+    <section id="start">
+      <button id="btn-create">Criar Hábito</button>
+    </section>
+
+    <!-- Seleção de tipo de hábito -->
+    <section id="types" class="hidden">
+      <h2>Qual o tipo de hábito que deseja criar?</h2>
+      <div class="type-cards">
+        <button class="type-card" data-type="exercise">
+          <img src="assets/exercicio.png" alt="Exercício Físico">
+          <span>Exercício Físico</span>
+        </button>
+        <button class="type-card" data-type="water">
+          💧<span>Beber Água</span>
+        </button>
+        <button class="type-card" data-type="custom">
+          ✏️<span>Personalizado</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Formulários dinâmicos -->
+    <section id="forms" class="hidden">
+      <!-- Exercício -->
+      <form id="form-exercise" class="habit-form hidden">
+        <h3>Exercício Físico</h3>
+        <label>Nome do Exercício:<input type="text" id="exercise-name" required></label>
+        <label>Tempo (horas):<input type="number" id="exercise-time" min="0" step="0.1" required></label>
+        <label>Calorias (opcional):<input type="number" id="exercise-calories" min="0"></label>
+        <fieldset>
+          <legend>Dias para realização:</legend>
+          <label><input type="checkbox" value="dom">Dom</label>
+          <label><input type="checkbox" value="seg">Seg</label>
+          <label><input type="checkbox" value="ter">Ter</label>
+          <label><input type="checkbox" value="qua">Qua</label>
+          <label><input type="checkbox" value="qui">Qui</label>
+          <label><input type="checkbox" value="sex">Sex</label>
+          <label><input type="checkbox" value="sab">Sab</label>
+        </fieldset>
+        <button type="submit">Salvar Exercício</button>
+      </form>
+
+      <!-- Água -->
+      <form id="form-water" class="habit-form hidden">
+        <h3>Beber Água</h3>
+        <label>Litros por dia:<input type="number" id="water-amount" min="0.1" step="0.1" required></label>
+        <fieldset>
+          <legend>Dias para realização:</legend>
+          <!-- mesmos checkboxes -->
+          <label><input type="checkbox" value="dom">Dom</label>
+          <label><input type="checkbox" value="seg">Seg</label>
+          <label><input type="checkbox" value="ter">Ter</label>
+          <label><input type="checkbox" value="qua">Qua</label>
+          <label><input type="checkbox" value="qui">Qui</label>
+          <label><input type="checkbox" value="sex">Sex</label>
+          <label><input type="checkbox" value="sab">Sab</label>
+        </fieldset>
+        <button type="submit">Salvar Água</button>
+      </form>
+
+      <!-- Personalizado -->
+      <form id="form-custom" class="habit-form hidden">
+        <h3>Personalizado</h3>
+        <label>Descrição:<input type="text" id="custom-desc" required></label>
+        <fieldset>
+          <legend>Dias para realização:</legend>
+          <!-- mesmos checkboxes -->
+          <label><input type="checkbox" value="dom">Dom</label>
+          <label><input type="checkbox" value="seg">Seg</label>
+          <label><input type="checkbox" value="ter">Ter</label>
+          <label><input type="checkbox" value="qua">Qua</label>
+          <label><input type="checkbox" value="qui">Qui</label>
+          <label><input type="checkbox" value="sex">Sex</label>
+          <label><input type="checkbox" value="sab">Sab</label>
+        </fieldset>
+        <button type="submit">Salvar Hábito</button>
+      </form>
+    </section>
+
+    <!-- Sumário de hábitos -->
+    <section id="summary" class="hidden">
+      <h2>Suas Estatísticas</h2>
+      <ul id="stats-list">
+        <!-- Itens gerados por JS -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 ProjetoSaúde — Estatísticas atualizadas dinamicamente.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
