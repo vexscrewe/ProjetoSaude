@@ -1,36 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ProjetoSaúde - Controle de Hábitos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Hábitos</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>ProjetoSaúde</h1>
-    <button id="btn-add-habit">+ Criar Hábito</button>
-  </header>
+  <div class="title-banner">
+    <img src="assets/coracao.png" alt="Saúde" class="icon" />
+    <h1>Controle de Hábitos</h1>
+    <img src="assets/exercicio.png" alt="Exercício" class="icon" />
+  </div>
+  <button id="btn-add-habit">+ Novo Hábito</button>
+</header>
 
   <main>
     <section id="habit-selector" class="hidden">
-      <h2>Qual o tipo de hábito que deseja criar?</h2>
+      <h2>Escolha o tipo de hábito</h2>
       <div class="habit-options">
-        <button data-type="exercicio">🏃 Exercício Físico</button>
-        <button data-type="agua">💧 Beber Água</button>
-        <button data-type="personalizado">✨ Personalizado</button>
+        <button data-type="exercicio">
+          <img src="assets/exercicio.png" alt="Exercício" />
+          Exercício Físico
+        </button>
+        <button data-type="agua">
+          <img src="assets/coracao.png" alt="Beber Água" />
+          Beber Água
+        </button>
+        <button data-type="personalizado">
+          <img src="assets/coracao.png" alt="Personalizado" />
+          Personalizado
+        </button>
       </div>
     </section>
 
-    <section id="habit-form-section" class="hidden">
-      <form id="habit-form"></form>
+    <section id="habit-form" class="hidden">
+      <form id="form-habit">
+        <div id="form-fields"></div>
+
+        <div class="days-checkbox">
+          <label><input type="checkbox" name="dias" value="Seg">Seg</label>
+          <label><input type="checkbox" name="dias" value="Ter">Ter</label>
+          <label><input type="checkbox" name="dias" value="Qua">Qua</label>
+          <label><input type="checkbox" name="dias" value="Qui">Qui</label>
+          <label><input type="checkbox" name="dias" value="Sex">Sex</label>
+          <label><input type="checkbox" name="dias" value="Sáb">Sáb</label>
+          <label><input type="checkbox" name="dias" value="Dom">Dom</label>
+        </div>
+
+        <button type="submit">Salvar Hábito</button>
+      </form>
     </section>
   </main>
 
   <footer>
-    <h3>Estatísticas</h3>
-    <p id="summary">Nenhum hábito registrado ainda.</p>
+    <p id="summary">Total: 0h de exercício, 0L de água</p>
   </footer>
 
   <script src="js/script.js"></script>
