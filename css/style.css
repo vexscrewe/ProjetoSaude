@@ -98,6 +98,26 @@ main {
   height: 24px;
 }
 
+#habit-list {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fff8f8;
+  border-radius: 10px;
+}
+
+#habit-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#habit-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #ffeaea;
+  border-radius: 5px;
+}
+
+
 form {
   max-width: 600px;
   margin: auto;
